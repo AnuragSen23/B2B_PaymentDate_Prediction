@@ -1,0 +1,1181 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <title>HighRadius B2B Invoice Application</title>
+        <img src="\assets\Group 20399@2x.png" class="image1">
+        <img src="\assets\logo@2x.png" class="image2">
+        <h2>Invoice List</h2>
+        <style>
+            .wrapper > div{
+                margin-top: 170px;
+                margin-left: 18px;
+                top: 160px;
+                left: 20px;
+                width: 1930px;
+                height: 739px;
+                background: #273D49CC 0% 0%;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            body{
+                background: #58687E;
+                width: 1920px;
+                height: 745px;                
+            }
+            h2{
+                position: absolute;
+                top: 100px;
+                left: 30px;
+                width: 141px;
+                height: 31px;
+                text-align: left;
+                font: normal normal normal 28px/32px 'Ubuntu';
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+            .image1{
+                position: absolute;
+                top: 16px;
+                left: 30px;
+                width: 233px;
+                height: 52px;
+                text-align: left;
+                font: normal normal bold 39px/52px Futura PT;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+            .image2{
+                position: absolute;
+                top: 22px;
+                left: 843px;
+                width: 235px;
+                height: 50px;
+                text-align: center;
+                opacity: 1;
+            }
+            #col{
+                text-align: right;
+                font: normal normal normal 18px/21px Ubuntu;
+                letter-spacing: 0px;
+                color: #97A1A9;
+                text-transform: capitalize;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            .col1{
+                position: absolute;
+                top: 265px;
+                left: 121px;
+                width: 131px;
+                height: 20px;
+            }
+            .col2{
+                position: absolute;
+                top: 265px;
+                left: 362px;
+                width: 95px;
+                height: 20px;
+            }
+            .col3{
+                position: absolute;
+                top: 265px;
+                left: 612px;
+                width: 73px;
+                height: 20px;
+            }
+            .col4{
+                position: absolute;
+                top: 265px;
+                left: 768px;
+                width: 127px;
+                height: 20px;
+            }
+            .col5{
+                position: absolute;
+                top: 265px;
+                left: 1106px;
+                width: 76px;
+                height: 20px;
+            }
+            .col6{
+                position: absolute;
+                top: 265px;
+                left: 1251px;
+                width: 198px;
+                height: 20px;
+            }
+            .col7{
+                position: absolute;
+                top: 265px;
+                left: 1609px;
+                width: 49px;
+                height: 20px;
+            }
+            #row1{
+                position: absolute;
+                top: 347px;
+                left: 61px;
+                color: white;
+                width: 1800px;
+                height: 50px;
+                background-color: #273D49CC 0% 0%;
+                border-radius: 4px;
+                opacity: 1;
+                white-space: nowrap;    
+            }
+            .button1 {
+                position: absolute;
+                background: #273D49CC;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                top: 190px;
+                color: #97A1A9;
+                cursor: pointer;
+                left: 1426px;
+                width: 99px;
+                height: 45px;
+                border: 1px solid #97A1A9;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            .button2 {
+                position: absolute;
+                background: #273D49CC;
+                top: 190px;
+                left: 1545px;
+                width: 102px;
+                height: 45px;
+                text-align: center;
+                cursor: pointer;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #97A1A9;
+                opacity: 1;
+                border: 1px solid #97A1A9;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            .button3 {
+                position: absolute;
+                background: #273D49CC;
+                top: 190px;
+                left: 1667px;
+                width: 123px;
+                height: 45px;
+                text-align: center;
+                cursor: pointer;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #97A1A9;
+                opacity: 1;
+                border: 1px solid #97A1A9;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            .button1:hover{
+                border-color: #14AFF1;
+                color: #FFFFFF;
+            }
+            .button2:hover{
+                border-color: #14AFF1;
+                color: #FFFFFF;
+            }
+            .button3:hover{
+                border-color:#14AFF1;
+                color: #FFFFFF;
+            }
+            /*.searchbox {
+                background-image: url('https://toppng.com/uploads/preview/free-icons-png-instagram-search-icon-white-11562954322qzcobg6iwo.png');
+                position: absolute;
+                top: 183px;
+                left: 1510px;
+                width: 340px;
+                height: 45px; 
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #97A1A9;
+                border-radius: 10px;
+                opacity: 1;     
+            }  
+            .searchbox:hover{
+                border-color:#14AFF1;
+                color: #FFFFFF;
+            }*/
+            input[type=text] {  
+                padding: 6px;  
+                margin-top: 8px;  
+                font-size: 17px;  
+                border: 1px solid #97A1A9; 
+            }  
+            .tbody{
+                position: absolute;
+                margin-top: 185px;
+                margin-left: 20px;
+                top: 120px;
+                left: 20px;
+                width: 1980px;
+                height: 739px;
+                color: white;    
+            }
+            .abc{
+                position: absolute;
+                margin-left: 20px;
+                text-align: left;
+                font: normal normal normal 18px/21px Ubuntu;
+                letter-spacing: 0px;
+                color: #97A1A9;
+                opacity: 1;    
+            }
+            #col1 {
+                position: absolute;
+                top: 265px;
+                left: 121px;
+                width: 131px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col2 {
+                position: absolute;
+                top: 265px;
+                left: 362px;
+                width: 95px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col3 {
+                position: absolute;
+                top: 265px;
+                left: 612px;
+                width: 73px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col4 {
+                position: absolute;
+                top: 265px;
+                left: 768px;
+                width: 127px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col5 {
+                position: absolute;
+                top: 265px;
+                left: 1106px;
+                width: 76px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col6 {
+                position: absolute;
+                top: 265px;
+                left: 1251px;
+                width: 198px;
+                height: 20px;
+                white-space: nowrap;
+            }
+            #col7 {
+                position: absolute;
+                top: 265px;
+                left: 1609px;
+                width: 49px;
+                height: 20px;
+                white-space: nowrap;    
+            }
+            table, tr:nth-child(odd){
+                background-color: #283A46;
+            }
+
+            tr:hover {
+                background-color:#58687E;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+            table,td {
+                padding: 10px;
+                padding-right: 20px;
+                padding-bottom: 15px;
+                border: 15px;
+                border-collapse: collapse;
+            }
+            #pos1{
+                padding-left: 50px;
+                top: 309px;
+                left: 122px;
+                width: 128px;
+                height: 48px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #pos2{
+                
+                padding-left: 15px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #pos3{
+                
+                padding-left: 77px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #pos4{
+                
+                padding-left: 95px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #pos5{
+                
+                padding-left: 122px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #pos6{
+                
+                padding-left: 120px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+
+            #pos7{
+                
+                padding-left: 112px;
+
+                left: 122px;
+                width: 128px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            .checkbox{
+                border: #97A1A9;
+                margin-left: 5px;
+                background: transparent;
+                border-radius: 10px;
+                opacity: 1;
+                top: 267px;
+                left: 80px;
+                width: 16px;
+                height: 16px;
+                size: 1.5px;
+            }
+            .checkbox1{
+                position: absolute;
+                margin-left: 25px;
+                border: #97A1A9;
+                background: transparent;
+                border-radius: 10px;
+                opacity: 1;
+                top: 267px;
+                left: 30px;
+                width: 16px;
+                height: 16px;
+                size: 1.5px;
+            }  
+
+            .modal-container{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0,0,0,0.8);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.4s ease;
+            }
+            .modal_1{
+                position: fixed;
+                top: 226px;
+                left: 407px;
+                width: 1106px;
+                height: 509px;
+                background-color: #2A3E4C; 
+                text-align: center;
+                border-radius: 6px;
+                opacity: 1;
+            }
+            .modal-container.show{
+                pointer-events: auto;
+                opacity: 1;
+            }
+
+            .modal-container_2{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0,0,0,0.8);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.4s ease;
+            }
+            .modal_2{
+                position: fixed;
+                top: 294px;
+                left: 654px;
+                width: 611px;
+                height: 342px;
+                background-color: #2A3E4C; 
+                text-align: center;
+                border-radius: 6px;
+                opacity: 1;
+            }
+            .modal-container_2.show{
+                pointer-events: auto;
+                opacity: 1;
+            }
+
+
+
+            .modal-container_3{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0,0,0,0.8);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.4s ease;
+            }
+            .modal_3{
+                position: fixed;
+                top: 294px;
+                left: 654px;
+                width: 543px;
+                height: 511px;
+                background-color: #2A3E4C; 
+                text-align: center;
+                border-radius: 6px;
+                opacity: 1;
+            }
+            .modal-container_3.show{
+                pointer-events: auto;
+                opacity: 1;
+            }
+
+
+            
+            .required:after {
+                content:" *";
+                color: red;
+            }
+
+            hr.r1 {
+                top: 226px;
+                left: 407px;
+                border: 0.1px solid black;
+                opacity: 0.2;
+            }
+            
+            hr.r2 {
+                position: static;
+                margin-top: 230px;
+                top: 656px;
+                left: 458px;
+                border: 0.1px solid black;
+                opacity: 0.2;
+            }
+            h2.head{
+                position: static;
+                margin-left: 20px;
+                top: 256px;
+                left: 437px;
+                width: 147px;
+                height: 31px;
+                text-align: left;
+                font: normal normal normal 28px/32px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                text-transform: capitalize;
+                opacity: 1;
+                white-space: nowrap;
+            }
+            #close {
+                position: absolute;
+                margin-left: 20px;
+                top: 30px;
+                left: 1035px;
+                width: 24px;
+                height: 24px;
+            }
+            #close_1 {
+                position: absolute;
+                background-color: transparent;
+                border-color: transparent;
+                color: #14AFF1;
+                font: normal normal normal 23px/60px Ubuntu;
+                cursor: pointer;
+                top: 430px;
+                left: 40px;
+                width: 60px;
+                height: 23px;
+            }
+            #name-cust{
+                position:fixed;
+                top: 357px;
+                width: 163px;
+                left: 437px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #name_customer{
+                position: fixed;
+                top: 337px;
+                left: 620px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            #cust_no{
+                position:fixed;
+                top: 430px;
+                left: 437px;
+                width: 141px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #cust_number{
+                position: fixed;
+                top: 410px;
+                left: 620px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+
+            }
+            #invo_no {
+                position:fixed;
+                top: 503px;
+                left: 437px;
+                width: 116px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #invoice_id {
+                position: fixed;
+                top: 483px;
+                left: 620px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            #invo_amt {
+                position:fixed;
+                top: 576px;
+                left: 437px;
+                width: 159px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #total_open_amount{
+                position: fixed;
+                top: 556px;
+                left: 620px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            #due_date {
+                position:fixed;
+                top: 357px;
+                left: 1000px;
+                width: 101px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #due_in_date {
+                position: fixed;
+                top: 337px;
+                left: 1183px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+                font: normal normal normal 20px/24px Ubuntu;
+                color: white;
+
+            }
+            [type="date"]::-webkit-calendar-picker-indicator {
+            position: fixed;
+            filter: invert(1);
+            background-color: transparent;
+            cursor: pointer;
+            left: 1420px;
+            width: 24px;
+            height: 24px;
+            }
+
+            #note {
+                position:fixed;
+                top: 416px;
+                left: 1000px;
+                width: 55px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #notes {
+                position: fixed;
+                top: 420px;
+                left: 1183px;
+                width: 300px;
+                height: 191px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+                font: normal normal normal 20px/24px Ubuntu;
+                color: white;
+
+            }
+            .add_submit{
+                position: fixed;
+                top: 668px;
+                left: 1406px;
+                width: 74px;
+                height: 43px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                background-color: #97A1A9;
+                border: 1px solid #97A1A9;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .add_submit:hover{
+                background-color: #14AFF1;
+                color: #FFFFFF;
+            }
+            .clear {
+                position: fixed;
+                top: 668px;
+                left: 1310px;
+                width: 74px;
+                height: 43px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #97A1A9;
+                text-align: center;
+                cursor: pointer;
+            }
+            .clear:hover{
+                border-color: #14AFF1;
+            }
+            p.pt{
+                position: fixed;
+                top: 390px;
+                margin-left: 30px;
+                width: 702px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #C0C6CA;
+            }
+            hr.r3 {
+                position: static;
+                margin-top: 170px;
+                top: 656px;
+                left: 458px;
+                border: 0.5px solid black;
+                opacity: 0.2;
+            }
+            #close_2 {
+                position: absolute;
+                top: 30px;
+                left: 555px;
+                width: 24px;
+                height: 24px;
+            }
+            .del {
+                position: fixed;
+                top: 570px;
+                left: 1145px;
+                width: 90px;
+                height: 43px;
+                text-align: center;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                background-color: #97A1A9;
+                border: 1px solid #97A1A9;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .del:hover{
+                background-color: #14AFF1;
+                color: #FFFFFF;
+
+            }
+            .cancel_1 {
+                position: fixed;
+                top: 570px;
+                left: 1035px;
+                width: 90px;
+                height: 43px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #97A1A9;
+                text-align: center;
+                cursor: pointer;
+            }
+            .cancel_1:hover{
+                border-color: #14AFF1;
+            }
+            hr.r4{
+                position: static;
+                margin-top:40px;
+                top: 656px;
+                left: 458px;
+                border: 0.5px solid black;
+                opacity: 0.2;
+            }
+            hr.r5{
+                position: static;
+                margin-top: 280px;
+                top: 886px;
+                left: 458px;
+                border: 0.5px solid black;
+                opacity: 0.2;
+            }
+            h2.head_1{
+                position: static;
+                margin-top: 30px;
+                margin-left: 20px;
+                top: 256px;
+                left: 437px;
+                width: 147px;
+                height: 31px;
+                text-align: left;
+                font: normal normal normal 28px/32px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                text-transform: capitalize;
+                opacity: 1;
+                white-space: nowrap;
+
+            }
+            .cancel_2{
+                position: fixed;
+                top: 735px;
+                left: 695px;
+                width: 90px;
+                height: 43px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #14AFF1;
+                border: transparent;
+                opacity: 1;
+                border-radius: 10px;
+                background: #2A3E4C 0% 0% no-repeat padding-box;
+                text-align: center;
+                cursor: pointer; 
+            }
+            .save {
+                position: fixed;
+                top: 735px;
+                left: 1080px;
+                width: 90px;
+                height: 43px;
+                text-align: center;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                background-color: #97A1A9;
+                border: 1px solid #97A1A9;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .save:hover{
+                background-color: #14AFF1;
+                color: #FFFFFF;
+            }
+            .close_3{
+                position: absolute;
+                top: 30px;
+                left: 495px;
+                width: 24px;
+                height: 24px;
+            }
+            .reset{
+                position: fixed;
+                top: 735px;
+                left: 970px;
+                width: 90px;
+                height: 43px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border-radius: 10px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #97A1A9;
+                text-align: center;
+                cursor: pointer;
+            }
+            .reset:hover{
+            border-color: #14AFF1;
+            color: #FFFFFF;
+            }
+            .edit_1 {
+            position: fixed;
+            top: 441px;
+            left: 685px;
+            width: 144px;
+            height: 23px;
+            text-align: left;
+            font: normal normal normal 20px/24px Ubuntu;
+            letter-spacing: 0.19px;
+            color: #97A1A9;
+            opacity: 1;
+            white-space: nowrap;
+            }
+            #edit_1{
+                position: fixed;
+                top: 420px;
+                left: 850px;
+                width: 300px;
+                height: 45px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+            }
+            .notes1{
+                position:fixed;
+                top: 508px;
+                left: 685px;
+                width: 144px;
+                height: 23px;
+                text-align: left;
+                font: normal normal normal 20px/24px Ubuntu;
+                white-space: nowrap;
+                color: #97A1A9;
+                letter-spacing: 0.19px;
+                opacity: 1;
+            }
+            #notes1{
+                position: fixed;
+                top: 500px;
+                left: 850px;
+                width: 300px;
+                height: 151px;
+                background: #283A46 0% 0% no-repeat padding-box;
+                border: 1px solid #356680;
+                border-radius: 10px;
+                opacity: 1;
+                font: normal normal normal 20px/24px Ubuntu;
+                color: white;
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="wrapper">
+            <div class="container">
+                <div>
+                    <table id = "data_table">
+                        <thead>
+                        <tr><input type="checkbox" class = "checkbox1" onClick="toggle(this)">
+                            <th class = "abc", id = "col1">Customer Name</th>
+                            <th class = "abc", id = "col2">Customer #</th>
+                            <th class = "abc", id = "col3">Invoice #</th>
+                            <th class = "abc", id = "col4">Invoice Amount</th>
+                            <th class = "abc", id = "col5">Due Date</th>
+                            <th class = "abc", id = "col6">Predicted Payment Date</th>
+                            <th class = "abc", id = "col7">Notes</th>
+                        </tr>
+                        </thead>
+                        <tbody class = "tbody">
+                        <!-- SCROLLBAR FOR FULL DATA -->
+                        <!--<tbody class = "tbody" style="width:1880px; height:580px; overflow:auto;">-->
+                        <script language="JavaScript">
+                            function toggle(source) {
+                                checkboxes = document.getElementsByName('dummy');
+                                for(var i=0, n=checkboxes.length;i<n;i++) {
+                                    checkboxes[i].checked = source.checked;
+                                    }
+                                }
+                            json_path = "b2b_10_invoices.json";
+
+                            $(document).ready(function() {
+                                $.getJSON(json_path, function(data){
+                                    var customer_data = '';  
+                                    $.each(data, function(key, value){
+                                        customer_data += '<tr>';
+                                        customer_data += '<td><input type="checkbox" name="dummy" class = "checkbox"></td>';
+                                        customer_data += '<td id = "pos1">' + value.name_customer + '</td>';
+                                        customer_data += '<td id = "pos2">' + value.cust_number + '</td>';
+                                        customer_data += '<td id = "pos3">' + value.invoice_id + '</td>';
+                                        customer_data += '<td id = "pos4">' + value.total_open_amount + '</td>';
+                                        customer_data += '<td id = "pos5">' + value.due_in_date + '</td>';
+                                        customer_data += '<td id = "pos6">' + value.clear_date_pred + '</td>';
+                                        customer_data += '<td id = "pos7">' + 'Lorem ipsum dolor sit...' + '</td>';
+                                        customer_data += '</tr>'
+                                    });
+                                    $('#data_table').append(customer_data); 
+                                });
+                            });
+                            </script>
+                            </tbody>
+                    </table>
+                </div>
+                <input type="button" id = "open" class="button1" value="+   Add">
+                
+                <input type="button" id = "open_2" class="button2" value="🖊️ Edit">
+                <input type="button" id = "open_1" class="button3" value="➖ Delete">
+
+                 
+                <div class='modal-container' id='modal_container'>
+                    <div class = 'modal_1'>
+                        <h2 class = "head">Add Invoice</h2>
+                        <hr class="r1">
+                        <form>
+                            <label for="name_customer" class="required" id = "name-cust">Customer Name</label>
+                            <input type="text" id="name_customer" name="name_customer" style = "color: white" required><br>
+
+                            <label for="cust_number" class="required" id = "cust_no">Customer No.</label>
+                            <input type="text" id="cust_number" name="cust_number" style = "color: white" required><br>
+
+                            <label for="invoice_id" class="required" id="invo_no">Invoice No.</label>
+                            <input type="text" id="invoice_id" name="invoice_id" style = "color: white" required><br>
+
+                            <label for="total_open_amount" class="required" id = "invo_amt">Invoice Amount</label>
+                            <input type="text" id="total_open_amount" name="total_open_amount"  style = "color: white" required><br>
+
+                            <label for="due_in_date" class="required" id="due_date">Due Date</label>
+                            <input type="date" required pattern="d{2}/d{2}/d{4}" id="due_in_date" name="due_in_date" style = "color: white"  required><br>
+
+                            <label for="notes" id = "note">Notes</label>
+                            <textarea id="notes" name="notes"></textarea>
+                            <input type="submit" value="  Add" class ="add_submit" style = "color: white" onclick="add()">
+                             
+                            <hr class="r2">
+                            <input type="image" id="close" src="\assets\baseline-close-24px.png"></input>
+                            <button type = "button" id="close_1">Cancel</button>
+                            <input type = "reset" class="clear" value="Clear">
+                        </form> 
+                    </div>                    
+                </div>
+
+                <div class='modal-container_2' id='modal_container_2'>
+                    <div class = 'modal_2'> 
+                        <h2 class = "head">Delete records?</h2>
+                        <hr class="r1">
+                            <p class = "pt">You'll lose your record(s) after this action. We can't recover <br> them once you delete. <br> <br> Are you sure you want to <span style="color: #FF5E5E;">permanently delete </span> them?</p>
+                        <hr class="r3">
+                        <input type="image" id="close_2" src="\assets\baseline-close-24px.png"></input>
+                        <button type = "button" class="cancel_1" id = "cancel_1">Cancel</button>
+                        <button type = "button" class="del" onclick="del()">Delete</button>
+                    </div>                    
+                </div>
+                <div class='modal-container_3' id='modal_container_3'>
+                    <div class = 'modal_3'> 
+                        <h2 class = "head_1">Edit Invoice</h2>
+                        <hr class="r4">
+                            <form>
+                                <label for="total_open_amount" class = "edit_1" >Invoice Amount</label>
+                                <input type="text" id="edit_1" name="total_open_amount" style = "color: white"><br>
+
+                                <label for="notes" class = "notes1">Notes</label>
+                                <textarea id="notes1" name="notes" style = "color: white"></textarea>
+                              
+                                <hr class="r5">
+                                <input type="image" class = "close_3" id="close_3" src="\assets\baseline-close-24px.png"></input>
+                                <button type = "button" class="cancel_2" id = "cancel_2">Cancel</button>
+                                <button type = "button" class="save" onclick="edit()">Save</button>
+                                <input type = "reset" class="reset" id = "reset" value="Reset">
+                            </form> 
+                    </div>                    
+                </div>
+                <script>
+                    const open_2 = document.getElementById('open_2');
+                    const modal_container_3 = document.getElementById('modal_container_3');
+                    const close_3 = document.getElementById('close_3');
+                    const cancel_2 = document.getElementById('cancel_2');
+
+
+                    open_2.addEventListener('click', () => {
+                        modal_container_3.classList.add('show');
+                    });
+
+                    close_3.addEventListener('click', () => {
+                        modal_container_3.classList.remove('show');
+                    });
+
+                    cancel_2.addEventListener('click', () => {
+                        modal_container_3.classList.remove('show');
+                    });
+
+                </script>
+                <script>
+                    const open_1 = document.getElementById('open_1');
+                    const modal_container_2 = document.getElementById('modal_container_2');
+                    const close_2 = document.getElementById('close_2');
+                    const cancel_1 = document.getElementById('cancel_1');
+
+
+                    open_1.addEventListener('click', () => {
+                        modal_container_2.classList.add('show');
+                    });
+
+                    close_2.addEventListener('click', () => {
+                        modal_container_2.classList.remove('show');
+                    });
+
+                    cancel_1.addEventListener('click', () => {
+                        modal_container_2.classList.remove('show');
+                    });
+
+                    function edit() {
+                        alert("to Edit Invoice");
+                    }
+
+                </script>
+                <!--<input type="text" placeholder="Search by Invoice Number" name="search" class="searchbox">   
+                <button type="submit" class="searchbox button">🔍</button>-->       
+                <script>
+                    const open = document.getElementById('open');
+                    const modal_container = document.getElementById('modal_container');
+                    const close = document.getElementById('close');
+                    const close_1 = document.getElementById('close_1');
+                    open.addEventListener('click', () => {
+                        modal_container.classList.add('show');
+                    });
+
+                    close.addEventListener('click', () => {
+                        modal_container.classList.remove('show');
+                    });
+
+                    close_1.addEventListener('click', () => {
+                        modal_container.classList.remove('show');
+                    });
+
+                    function edit() {
+                        alert("Invoice Changes saved!");
+                    }
+                    function del() {
+                        alert("Entry(s) Deleted!");
+                    }
+                    function add() {
+                        alert("Invoice Details added!");
+                    }                
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
